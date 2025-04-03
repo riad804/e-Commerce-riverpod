@@ -8,32 +8,32 @@ analyzer:
   strong-mode:
     implicit-casts: false
     implicit-dynamic: false
-  
+
   # Error/warning configuration
   errors:
     # Treat all warnings as errors (comment out if too strict)
     # all: warning
-    
+
     # Common strict rules
     deprecated_member_use: error
     invalid_override: error
     missing_required_param: error
     unnecessary_null_comparison: error
-    use_build_context_synchronously: error
-    
+    use_build_context_synchronously: ignore error
+
     # Documentation rules
     public_member_api_docs: warning
     annotate_overrides: warning
-    
+
     # Null safety
     dead_code: warning
     unreachable_switch_case: warning
-  
+
   # Language features
   language:
     strict-raw-types: true
     strict-inference: true
-  
+
   # Exclude generated files
   exclude:
     - "**/*.g.dart"

@@ -1,0 +1,48 @@
+rules_version = '2';
+
+service cloud.firestore {
+    match /databases/{database}/documents {
+        function isSignedIn() {
+            return request.auth != null;
+        }
+
+        function getUserID() {
+            return request.auth.uid;
+        }
+
+        function getUserRole() {
+            return get(/databases/$(database)/documents/users/$(getUserID())).data.role;
+        }
+
+        function isAdmin() {
+            return getUserRole() == "Admin";
+        }
+
+        match /users/{userId} {
+            // Users can read their own profile
+            allow read: if isSignedIn() && userId == getUserID();
+
+            // Users can create/update their own profile with valid data
+            allow create, update: if (
+            userId == getUserID() &&
+            request.resource.data.keys().hasAll(['email', 'name', 'role']) &&
+            request.resource.data.email is string &&
+            request.resource.data.name is string &&
+            request.resource.data.role is string
+            );
+        }
+
+        match /orders/{orderId} {
+            allow read, create: if userId == getUserID();
+
+            allow update: if false;
+            allow delete: if false;
+
+            match /{document=**} {
+                allow write: if {
+
+            }
+        }
+    }
+}
+}
