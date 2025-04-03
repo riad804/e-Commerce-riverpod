@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "824258480972",
+    "project_id": "ecommerce-riverpod-firebase",
+    "storage_bucket": "ecommerce-riverpod-firebase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824258480972:android:236b475fb0a6602bafdde9",
+        "android_client_info": {
+          "package_name": "com.riad.me.riverpod_ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDgqUAuUsDpvtWj_ZxsmhP9-dBCE4XrCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

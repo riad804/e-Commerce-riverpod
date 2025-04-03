@@ -43,3 +43,20 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# FVM Version Cache
+.fvm/
+.env
+
+# Generated files
+*.g.dart
+*.freezed.dart
+*.gr.dart
+*.gen.dart
+generated_plugin_registrant.dart
+.build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+pubspec.lock

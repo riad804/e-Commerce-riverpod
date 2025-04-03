@@ -1,0 +1,39 @@
+{
+  "dart.flutterSdkPath": ".fvm/versions/stable",
+  "dart.analysisExcludedFolders": [
+    "**/build/**",
+    "**/.dart_tool/**"
+  ],
+  "dart.showDartDeveloperLog": false,
+  "dart.previewLsp": true,
+  "dart.closingLabels": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "dart.analysisServerFolding": true,
+  "files.exclude": {
+    "**/*.g.dart": true,
+    "**/*.freezed.dart": true,
+    "**/*.gr.dart": true,
+    "**/*.gen.dart": true,
+    "**/generated_plugin_registrant.dart": true,
+    "**/build/": true,
+    "**/.dart_tool/": true,
+    "**/.flutter-plugins": true,
+    "**/.flutter-plugins-dependencies": true,
+    "**/.metadata": true,
+    "**/pubspec.lock": true,
+    "**/linux/":true,
+    "**/macos/":true,
+    "**/web/":true,
+    "**/windows/":true,
+    "**/test/":true,
+    "**/.fvm/":true,
+    "**/.idea/":true,
+  },
+  "search.exclude": {
+    "**/*.g.dart": true,
+    "**/build/": true,
+    "**/.dart_tool/": true
+  }
+}
